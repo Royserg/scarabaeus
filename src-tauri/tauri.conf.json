@@ -8,11 +8,12 @@
     "beforeBuildCommand": "bun run build",
     "frontendDist": "../dist"
   },
-  "app": {"windows": [
+  "app": {
+    "windows": [
       {
         "title": "scarabaeus",
-        "width": 800,
-        "height": 600
+        "width": 400,
+        "height": 300
       }
     ],
     "security": {

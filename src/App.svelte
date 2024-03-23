@@ -1,20 +1,15 @@
 <script lang="ts">
-  // import Greet from "./lib/Greet.svelte";
-  let count = $state(0);
-  const increase = () => (count += 1);
-  const decrease = () => (count -= 1);
+  import TodayNote from "./lib/today-note.svelte";
 </script>
 
 <main class="h-screen w-screen">
-  <h1 class="text-center text-black">Scarab</h1>
+  <h1 class="pt-2 text-center text-black">Scarabs</h1>
 
-  <div class="py-10"></div>
+  <div class="py-5"></div>
 
-  <div class="flex justify-center gap-4 text-black">
-    <button onclick={increase}>+</button>
-    <p>{count}</p>
-    <button onclick={decrease}>-</button>
-  </div>
+  <ul class="flex justify-center gap-4 text-black">
+    <TodayNote />
+  </ul>
 </main>
 
 <style>
