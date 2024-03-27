@@ -1,5 +1,7 @@
 <script lang="ts">
   import TodayNote from "./lib/today-note.svelte";
+  import Custom from "./lib/custom.svelte";
+  import GitCommit from "./lib/git-commit.svelte";
 </script>
 
 <main class="h-screen w-screen">
@@ -7,8 +9,12 @@
 
   <div class="py-5"></div>
 
-  <ul class="flex justify-center gap-4 text-black">
+  <ul class="flex w-full flex-col items-center justify-center gap-4 text-black">
     <TodayNote />
+    <GitCommit />
+
+    <!-- There are some limitations on the custom command -->
+    <!-- <Custom /> -->
   </ul>
 </main>
 
