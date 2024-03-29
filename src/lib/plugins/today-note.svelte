@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { path } from "@tauri-apps/api";
+  import { path, window } from "@tauri-apps/api";
   import { open } from "@tauri-apps/plugin-dialog";
   import { Command, open as shellOpen } from "@tauri-apps/plugin-shell";
 
@@ -53,6 +53,10 @@
 
     try {
       await shellOpen(todayFilePath);
+
+      // Hide app
+      const currentWindow = window.getCurrent();
+      await currentWindow.hide();
     } catch (err) {
       console.log("Failed opening file", err);
     }
@@ -60,7 +64,7 @@
 </script>
 
 <button
-  class="w-[200px] rounded-lg border-2 border-black p-2"
+  class="w-full rounded-lg border-2 border-black bg-white p-2 shadow-sm shadow-black"
   onclick={handleTodayClick}
 >
   <h5>Today Note</h5>

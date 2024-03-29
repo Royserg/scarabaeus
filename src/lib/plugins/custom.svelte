@@ -1,4 +1,8 @@
 <script lang="ts">
+  // NOTE:
+  // Currently not functional.
+  // Can't run arbirary shell comamnds
+  //
   import { path } from "@tauri-apps/api";
   import { open } from "@tauri-apps/plugin-dialog";
   import { Command, open as shellOpen } from "@tauri-apps/plugin-shell";

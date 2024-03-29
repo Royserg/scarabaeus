@@ -1,7 +1,7 @@
 {
   "productName": "scarabaeus",
   "version": "0.0.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.scarabaeus.dev",
   "build": {
     "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",
@@ -9,11 +9,20 @@
     "frontendDist": "../dist"
   },
   "app": {
+    "macOSPrivateApi": true,
     "windows": [
       {
+        "shadow": true,
+        "maximized": true,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "center": true,
+        "focus": true,
+        "decorations": false,
         "title": "scarabaeus",
         "width": 400,
-        "height": 300
+        "height": 300,
+        "y": 10.0
       }
     ],
     "security": {
