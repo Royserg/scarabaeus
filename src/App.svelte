@@ -4,28 +4,28 @@
   import TodayNote from "./lib/plugins/today-note.svelte";
   // import { register } from "@tauri-apps/plugin-global-shortcut";
 
-  // $effect(() => {
-  //   console.log("INIt");
-  //   document.addEventListener("keydown", handleKeyDown);
+  $effect(() => {
+    console.log("INIt");
+    document.addEventListener("keydown", handleKeyDown);
 
-  //   return () => document.removeEventListener("keydown", handleKeyDown);
-  // });
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  });
 
-  // const hideWindow = () => {
-  //   window.getCurrent().hide();
-  // };
+  const hideWindow = () => {
+    window.getCurrent().hide();
+  };
 
-  // const handleKeyDown = (e: KeyboardEvent) => {
-  //   const key = e.key;
+  const handleKeyDown = (e: KeyboardEvent) => {
+    const key = e.key;
 
-  //   // Hide app when Esc is pressed
-  //   if (key === "Escape") {
-  //     hideWindow();
-  //   }
-  // };
+    // Hide app when Esc is pressed
+    if (key === "Escape") {
+      hideWindow();
+    }
+  };
 
   const handleBackdropClick = () => {
-    // hideWindow();
+    hideWindow();
   };
 </script>
 
