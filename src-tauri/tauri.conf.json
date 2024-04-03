@@ -4,9 +4,9 @@
   "identifier": "com.scarabaeus.dev",
   "build": {
     "beforeDevCommand": "bun run dev",
-    "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "bun run build",
-    "frontendDist": "../dist"
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../build"
   },
   "app": {
     "macOSPrivateApi": true,

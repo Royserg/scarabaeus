@@ -1,23 +1,15 @@
 <script lang="ts">
-  import type { HTMLButtonAttributes } from "svelte/elements";
+	import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { children, onclick }: HTMLButtonAttributes = $props();
-
-  type OnClick = MouseEvent & {
-    currentTarget: EventTarget & HTMLButtonElement;
-  };
-  const handleClick = (e: OnClick) => {
-    if (onclick) {
-      onclick(e);
-    }
-  };
+	let { children, href, onclick }: HTMLAnchorAttributes = $props();
 </script>
 
-<button
-  onclick={handleClick}
-  class="w-full rounded-lg border-2 border-black bg-white p-2 shadow-sm shadow-black transition-colors duration-200 focus:bg-black focus:text-white"
+<a
+	{href}
+	{onclick}
+	class="w-full rounded-lg border-2 border-black bg-white p-2 text-center shadow-sm shadow-black transition-colors duration-200 focus:bg-black focus:text-white"
 >
-  {#if children}
-    {@render children()}
-  {/if}
-</button>
+	{#if children}
+		{@render children()}
+	{/if}
+</a>
